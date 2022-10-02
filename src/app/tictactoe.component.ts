@@ -2,40 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tic-tac-toe',
-  template: `
-    <div>Next Player: {{ currentPlayer }} </div>
-    <div [ngClass]="winner != 'None' ? 'winner' : ''">Winner: {{ winner }}</div>
-    <button class="reset-button" (click)="reset()">Reset</button>
-    <div *ngFor="let row of [1,2,3]">
-      <div class="ttt-row">
-        <div *ngFor="let col of [1,2,3]">
-          <button
-            class="ttt-button"
-            (click)="buttonClicked($event.target, row, col)"
-          ></button>
-        </div>
-      <div>
-    </div>
-  `,
-  styles: [`
-    .reset-button {
-      padding: 5px;
-      margin: 0 0 4px 0;
-      width: 95px;
-    }
-    .ttt-row {
-        margin-bottom: 2px;
-        display: flex;
-        gap: 2px;
-    }
-    .ttt-button {
-        width: 30px;
-        height: 30px;
-    }
-    .winner {
-        color: red;
-    }
-  `]
+  templateUrl: './tictactoe.component.html',
+  styleUrls: ['./tictactoe.component.css']
 })
 export class TicTacToeComponent {
   currentPlayer = 'X';

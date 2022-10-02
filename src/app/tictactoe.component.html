@@ -1,0 +1,13 @@
+<div>Next Player: {{ currentPlayer }} </div>
+<div [ngClass]="winner != 'None' ? 'winner' : ''">Winner: {{ winner }}</div>
+<button class="reset-button" (click)="reset()">Reset</button>
+<div *ngFor="let row of [1,2,3]">
+  <div class="ttt-row">
+    <div *ngFor="let col of [1,2,3]">
+      <button
+        class="ttt-button"
+        (click)="buttonClicked($event.target, row, col)"
+      ></button>
+    </div>
+  <div>
+</div>

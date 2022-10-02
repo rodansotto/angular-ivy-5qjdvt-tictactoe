@@ -1,0 +1,17 @@
+.reset-button {
+  padding: 5px;
+  margin: 0 0 4px 0;
+  width: 95px;
+}
+.ttt-row {
+    margin-bottom: 2px;
+    display: flex;
+    gap: 2px;
+}
+.ttt-button {
+    width: 30px;
+    height: 30px;
+}
+.winner {
+    color: red;
+}
